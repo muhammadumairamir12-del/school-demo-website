@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dar-e-Arqam School - Quality Education</title>
+    <title>Best Future Education System - Quality Education</title>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -185,7 +185,54 @@
             font-size: 1.1rem;
         }
 
-        /* --- Features Section --- */
+        /* --- Leadership Section --- */
+        .leader-card {
+            background-color: var(--secondary);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .leader-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        }
+        .leader-card .leader-img-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px auto;
+            border: 4px solid var(--primary);
+            box-shadow: 0 0 0 5px rgba(30, 136, 229, 0.2);
+        }
+        .leader-card .leader-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .leader-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark-gray);
+            margin-bottom: 5px;
+        }
+        .leader-card .leader-title {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .leader-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+
+        /* --- Features --- */
         .feature-card {
             background-color: var(--secondary);
             border-radius: 10px;
@@ -213,6 +260,39 @@
             font-size: 0.95rem;
             color: var(--text-color);
         }
+
+        /* --- Campus Facilities --- */
+        .facility-card {
+            background-color: var(--secondary);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            text-align: center;
+        }
+        .facility-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        }
+        .facility-card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .facility-card h4 {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .facility-card p {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
 
         /* --- Academic Programs --- */
         .program-card {
@@ -816,7 +896,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#">Dar-e-Arqam School</a>
+            <a class="navbar-brand" href="#">Best Future Education System</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -827,6 +907,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#leadership">Leadership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#facilities">Facilities</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#academics">Academics</a>
@@ -861,7 +947,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active" style="background-image: url('https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
                         <div class="carousel-caption">
-                            <h1 data-aos="fade-up" data-aos-delay="100">Quality Education for Your Child’s Bright Future at Dar-e-Arqam</h1>
+                            <h1 data-aos="fade-up" data-aos-delay="100">Quality Education for Your Child’s Bright Future at Best Future Education System</h1>
                             <p class="lead" data-aos="fade-up" data-aos-delay="200">Modern classrooms, expert teachers, and holistic development for every student.</p>
                             <div class="d-flex justify-content-center gap-3" data-aos="fade-up" data-aos-delay="300">
                                 <a href="#admissions" class="btn btn-primary-custom btn-lg">Admission Inquiry</a>
@@ -871,7 +957,7 @@
                     </div>
                     <div class="carousel-item" style="background-image: url('https://images.pexels.com/photos/10646430/pexels-photo-10646430.jpeg');">
                         <div class="carousel-caption">
-                            <h1 data-aos="fade-up" data-aos-delay="100">Empowering Minds, Building Futures at Dar-e-Arqam</h1>
+                            <h1 data-aos="fade-up" data-aos-delay="100">Empowering Minds, Building Futures at Best Future Education System</h1>
                             <p class="lead" data-aos="fade-up" data-aos-delay="200">A vibrant learning environment where curiosity thrives and potential is unleashed.</p>
                             <div class="d-flex justify-content-center gap-3" data-aos="fade-up" data-aos-delay="300">
                                 <a href="#academics" class="btn btn-primary-custom btn-lg">Explore Programs</a>
@@ -881,7 +967,7 @@
                     </div>
                     <div class="carousel-item" style="background-image: url('https://images.pexels.com/photos/35107553/pexels-photo-35107553.jpeg');">
                         <div class="carousel-caption">
-                            <h1 data-aos="fade-up" data-aos-delay="100">Nurturing Excellence, Inspiring Innovation at Dar-e-Arqam</h1>
+                            <h1 data-aos="fade-up" data-aos-delay="100">Nurturing Excellence, Inspiring Innovation at Best Future Education System</h1>
                             <p class="lead" data-aos="fade-up" data-aos-delay="200">Preparing students for success in a rapidly changing world through innovative teaching.</p>
                             <div class="d-flex justify-content-center gap-3" data-aos="fade-up" data-aos-delay="300">
                                 <a href="#admissions" class="btn btn-primary-custom btn-lg">Apply Now</a>
@@ -929,9 +1015,9 @@
                         <img src="https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="School Building" class="img-fluid">
                     </div>
                     <div class="col-lg-6" data-aos="fade-left">
-                        <h2 class="display-5 fw-bold mb-4">About Dar-e-Arqam School</h2>
+                        <h2 class="display-5 fw-bold mb-4">About Best Future Education System</h2>
                         <p class="about-text">
-                            Established in 1995, Dar-e-Arqam School has been a beacon of educational excellence, fostering a community where students are encouraged to explore, learn, and grow. We believe in providing a balanced education that nurtures intellectual curiosity, social responsibility, and personal well-being.
+                            Established in 1995, Best Future Education System has been a beacon of educational excellence, fostering a community where students are encouraged to explore, learn, and grow. We believe in providing a balanced education that nurtures intellectual curiosity, social responsibility, and personal well-being.
                         </p>
                         <p class="about-text">
                             Our vision is to empower students to become critical thinkers, lifelong learners, and compassionate global citizens. We are committed to a mission of delivering high-quality education through innovative teaching methods, a comprehensive curriculum, and a supportive learning environment.
@@ -942,11 +1028,48 @@
             </div>
         </section>
 
-        <!-- Features / Highlights Section -->
-        <section id="features" class="section-padding">
+        <!-- Our Leadership Section -->
+        <section id="leadership" class="section-padding">
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
-                    <h2 class="display-5 fw-bold">Why Choose Dar-e-Arqam School?</h2>
+                    <h2 class="display-5 fw-bold">Our Visionary Leadership</h2>
+                    <p class="lead">Guiding Best Future Education System towards excellence and innovation.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="leader-card">
+                            <div class="leader-img-container">
+                                <img src="https://images.pexels.com/photos/3775130/pexels-photo-3775130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mr. Zafar Iqbal - Founder" class="leader-img" loading="lazy">
+                            </div>
+                            <h3>Mr. Zafar Iqbal</h3>
+                            <div class="leader-title">Founder & CEO</div>
+                            <p>
+                                Mr. Zafar Iqbal envisioned an educational system that blends traditional values with modern pedagogy. His dedication to fostering a holistic learning environment has been the driving force behind the Best Future Education System, ensuring every student has the opportunity to achieve their full potential.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="leader-card">
+                            <div class="leader-img-container">
+                                <img src="https://images.pexels.com/photos/3775135/pexels-photo-3775135.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mrs. Nazia Zafar - Co-Founder" class="leader-img" loading="lazy">
+                            </div>
+                            <h3>Mrs. Nazia Zafar</h3>
+                            <div class="leader-title">Co-Founder & Director of Academics</div>
+                            <p>
+                                Mrs. Nazia Zafar, with her profound expertise in curriculum development and educational psychology, co-founded the institution. She is committed to implementing innovative teaching strategies and ensuring that the academic programs are rigorously designed to meet the evolving needs of students and society.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Features / Highlights Section -->
+        <section id="features" class="section-padding bg-light-gray">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold">Why Choose Best Future Education System?</h2>
                     <p class="lead">Our commitment to excellence makes us stand out.</p>
                 </div>
                 <div class="row">
@@ -959,23 +1082,23 @@
                     </div>
                     <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                         <div class="feature-card">
-                            <i class="fas fa-flask"></i>
-                            <h3>Modern Labs</h3>
-                            <p>State-of-the-art science and computer labs provide hands-on learning experiences.</p>
+                            <i class="fas fa-handshake"></i>
+                            <h3>Supportive Environment</h3>
+                            <p>We foster a caring and inclusive atmosphere where every student feels valued and supported.</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
                         <div class="feature-card">
-                            <i class="fas fa-book-reader"></i>
-                            <h3>Extensive Library</h3>
-                            <p>A vast collection of books and digital resources to foster a love for reading and research.</p>
+                            <i class="fas fa-medal"></i>
+                            <h3>Academic Excellence</h3>
+                            <p>A proven track record of outstanding results in board examinations and competitive tests.</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
                         <div class="feature-card">
                             <i class="fas fa-basketball-ball"></i>
-                            <h3>Sports Facilities</h3>
-                            <p>Excellent indoor and outdoor sports facilities for physical development and teamwork.</p>
+                            <h3>Sports & Co-Curricular</h3>
+                            <p>Comprehensive programs for physical development, arts, and extracurricular activities.</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
@@ -995,6 +1118,40 @@
                 </div>
             </div>
         </section>
+
+        <!-- Campus Facilities Section -->
+        <section id="facilities" class="section-padding">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold">Our State-of-the-Art Campus Facilities</h2>
+                    <p class="lead">Designed to provide an enriching and modern learning experience.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="facility-card">
+                            <img src="https://thumbs.dreamstime.com/z/interior-clean-modern-white-laboratory-background-laboratory-concept-medical-chemical-caucasian-male-chemist-horizontal-63500347.jpg?ct=jpeg" alt="Modern Science Lab">
+                            <h4>Modern Science Lab</h4>
+                            <p>Equipped with advanced apparatus for Chemistry, Physics, and Biology, our labs provide hands-on experimental learning, sparking scientific curiosity and innovation among students.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="facility-card">
+                            <img src="https://media.istockphoto.com/id/669775660/photo/students-in-a-computers-class-at-the-school.jpg?s=1024x1024&w=is&k=20&c=D7QbK6iTMDkCrJ4-prmodwDJw5vMUqaTewhSsp2xTLo=" alt="Advanced Computer Lab">
+                            <h4>Advanced Computer Lab</h4>
+                            <p>Our state-of-the-art computer lab features the latest hardware and software, offering students practical experience in coding, digital design, and information technology skills essential for the future.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="facility-card">
+                            <img src="https://images.unsplash.com/photo-1662582632312-e9d55a5f70b8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Extensive Library">
+                            <h4>Extensive Library & Resource Center</h4>
+                            <p>A serene space brimming with a diverse collection of books, journals, and digital resources. Our library encourages research, independent study, and cultivates a lifelong love for reading.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!-- Academic Programs / Curriculum Section -->
         <section id="academics" class="section-padding bg-light-gray">
@@ -1079,7 +1236,7 @@
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
                     <h2 class="display-5 fw-bold text-white">Our Outstanding Achievements</h2>
-                    <p class="lead text-white-50">Celebrating our students' continuous success and dedication.</p>
+                    <p class="lead text-white-50">Celebrating our students' continuous success and dedication at Best Future Education System.</p>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
@@ -1179,7 +1336,7 @@
         <!-- Admissions Section -->
         <section id="admissions" class="section-padding">
             <div class="container">
-                <h2 data-aos="fade-up">Admissions Open for 2026 at Dar-e-Arqam!</h2>
+                <h2 data-aos="fade-up">Admissions Open for 2026 at Best Future Education System!</h2>
                 <p data-aos="fade-up" data-aos-delay="100">
                     Secure your child's future with quality education. Apply online now for all classes.
                 </p>
@@ -1192,7 +1349,7 @@
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
                     <h2 class="display-5 fw-bold">Meet Our Expert Faculty</h2>
-                    <p class="lead">Dedicated educators inspiring the next generation at Dar-e-Arqam.</p>
+                    <p class="lead">Dedicated educators inspiring the next generation at Best Future Education System.</p>
                 </div>
                 <div class="row">
                     <!-- Teacher 1 -->
@@ -1279,7 +1436,7 @@
                     <div class="col-12" data-aos="fade-up" data-aos-delay="500">
                         <div class="teacher-profile-row">
                             <div class="teacher-img-container">
-                                <img src="https://images.pexels.com/photos/6913213/pexels-photo-6913213.jpeg" alt="Dr. Hina Khalid - Gynecologist" class="teacher-img" loading="lazy">
+                                <img src="https://images.pexels.com/photos/6913213/pexels-photo-6913213.jpeg" alt="Dr. Ayesha Imtiaz - English" class="teacher-img" loading="lazy">
                             </div>
                             <div class="teacher-info">
                                 <h3 class="teacher-name">Dr. Ayesha Imtiaz</h3>
@@ -1303,7 +1460,7 @@
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
                     <h2 class="display-5 fw-bold text-white">What Our Community Says</h2>
-                    <p class="lead text-white-50">Hear from our students and parents about Dar-e-Arqam School.</p>
+                    <p class="lead text-white-50">Hear from our students and parents about Best Future Education System.</p>
                 </div>
                 <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
                     <div class="carousel-indicators">
@@ -1315,7 +1472,7 @@
                         <div class="carousel-item active">
                             <div class="d-flex justify-content-center">
                                 <div class="col-lg-8 text-center" data-aos="zoom-in">
-                                    <p class="testimonial-text">"My child has truly blossomed at Dar-e-Arqam School. The teachers are incredibly supportive, and the focus on holistic development has made a huge difference."</p>
+                                    <p class="testimonial-text">"My child has truly blossomed at Best Future Education System. The teachers are incredibly supportive, and the focus on holistic development has made a huge difference."</p>
                                     <h4 class="testimonial-author">Mrs. Aisha Mahmood</h4>
                                     <p class="testimonial-role">Parent of Grade 5 Student</p>
                                 </div>
@@ -1356,7 +1513,7 @@
         <section id="gallery" class="section-padding">
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
-                    <h2 class="display-5 fw-bold">Dar-e-Arqam School in Action</h2>
+                    <h2 class="display-5 fw-bold">Best Future Education System in Action</h2>
                     <p class="lead">Glimpses of learning, creativity, and fun across our campus.</p>
                 </div>
                 <div class="row">
@@ -1432,6 +1589,31 @@
                             </div>
                         </div>
                     </div>
+                    <!-- New Gallery Items for Annual Event Photos -->
+                    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="1000">
+                        <div class="gallery-item">
+                            <img src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Annual Day Performance">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="1100">
+                        <div class="gallery-item">
+                            <img src="https://images.pexels.com/photos/139308/pexels-photo-139308.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sports Day Activities">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="1200">
+                        <div class="gallery-item">
+                            <img src="https://studentreasures.com/wp-content/uploads/2025/03/student-award-ideas-stand-out-boy-with-award.jpg" alt="School Awards Ceremony">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1441,7 +1623,7 @@
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
                     <h2 class="display-5 fw-bold">Latest News & Announcements</h2>
-                    <p class="lead">Stay updated with Dar-e-Arqam School's events and notices.</p>
+                    <p class="lead">Stay updated with Best Future Education System's events and notices.</p>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
@@ -1494,19 +1676,19 @@
         <section id="contact" class="section-padding bg-light-gray">
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
-                    <h2 class="display-5 fw-bold">Get In Touch with Dar-e-Arqam School</h2>
+                    <h2 class="display-5 fw-bold">Get In Touch with Best Future Education System</h2>
                     <p class="lead">We'd love to hear from you. Reach out with any questions or inquiries, or apply for admission.</p>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
                         <div class="contact-info">
-                            <p><i class="fas fa-map-marker-alt"></i> 123 School Lane, Education City, Sahiwal, Pakistan</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Street 4, Block C, Gulgasht Colony, Multan, Pakistan</p>
                             <p><i class="fas fa-phone-alt"></i> <a href="tel:+923184195665">+92 318 4195665</a></p>
                             <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/923184195665" target="_blank">+92 318 4195665</a></p>
-                            <p><i class="fas fa-envelope"></i> <a href="mailto:info@dar-e-arqam.com">info@dar-e-arqam.com</a></p>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:info@bestfuture.com">info@bestfuture.com</a></p>
                         </div>
                         <div class="map-container mt-4">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110058.6471900115!2d72.37895475!3d30.68656655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3918023a96860161%3A0x867c00e572e42b2e!2sSahiwal%2C%20Sahiwal%20District%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1705536551842!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55248.399967468664!2d71.46565168183554!3d30.064817929339988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b37b4bc69b88b%3A0x8455f4d20785b7c9!2sBest%20Future%20Education%20System!5e0!3m2!1sen!2s!4v1768711752890!5m2!1sen%2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                     <div class="col-lg-6" data-aos="fade-left">
@@ -1565,7 +1747,7 @@
                                     <i class="fas fa-phone-alt"></i>
                                 </div>
                                 <div class="dev-info">
-                                    <h6>Umair Amir</h6>
+                                    <h6>Muhammad Umair</h6>
                                     <p>+92 304 9472735</p>
                                 </div>
                             </div>
@@ -1575,8 +1757,8 @@
                                     <i class="fab fa-whatsapp"></i>
                                 </div>
                                 <div class="dev-info">
-                                    <h6>Ayesha Malik (WhatsApp)</h6>
-                                    <p>+92 3184195665</p>
+                                    <h6>Muhammad Umair (WhatsApp)</h6>
+                                    <p>+92 304 9472735</p>
                                 </div>
                             </div>
 
@@ -1601,7 +1783,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                    <h5>About Dar-e-Arqam School</h5>
+                    <h5>About Best Future Education System</h5>
                     <p>
                         Dedicated to providing quality education and fostering holistic development since 1995.
                         We empower students for a bright future.
@@ -1626,10 +1808,10 @@
                 <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                     <h5>Contact Info</h5>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 School Lane, Education City, Sahiwal</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Street 4, Block C, Gulgasht Colony, Multan</li>
                         <li><i class="fas fa-phone-alt me-2"></i> +92 318 4195665</li>
                         <li><i class="fab fa-whatsapp me-2"></i> +92 318 4195665</li>
-                        <li><i class="fas fa-envelope me-2"></i> info@dar-e-arqam.com</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@bestfuture.com</li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -1645,7 +1827,7 @@
             </div>
             <div class="row mt-4">
                 <div class="col-12 text-center disclaimer">
-                    <p>&copy; 2026 Dar-e-Arqam School. All rights reserved. | This is a demo school website for presentation purposes only.</p>
+                    <p>&copy; 2026 Best Future Education System. All rights reserved. | This is a demo school website for presentation purposes only.</p>
                 </div>
             </div>
         </div>
