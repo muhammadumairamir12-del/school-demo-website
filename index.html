@@ -1,3 +1,5 @@
+--- START OF FILE Paste January 20, 2026 - 12:17AM ---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +34,7 @@
             font-family: 'Open Sans', sans-serif;
             color: var(--text-color);
             background-color: var(--secondary);
-            overflow-x: hidden; /* Prevent horizontal scroll due to AOS animations */
+            overflow-x: hidden; /* Prevent horizontal scroll due to AOS animations and general layout */
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -148,6 +150,7 @@
             position: relative;
             z-index: 2;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            padding: 0 15px; /* Add some padding to prevent text touching edges */
         }
         #hero h1 {
             font-size: 3.5rem;
@@ -166,6 +169,18 @@
             }
             #hero p {
                 font-size: 1rem;
+            }
+        }
+        @media (max-width: 480px) { /* Added for very small screens */
+            #hero h1 {
+                font-size: 1.8rem; /* Further reduce font size */
+            }
+            #hero p {
+                font-size: 0.9rem; /* Further reduce font size */
+            }
+            #hero .carousel-caption .btn { /* Adjust button size for small screens */
+                padding: 8px 15px;
+                font-size: 0.9rem;
             }
         }
 
@@ -871,12 +886,7 @@
             .section-padding {
                 padding: 40px 0;
             }
-            #hero h1 {
-                font-size: 2rem; /* Adjusted for smaller screens */
-            }
-            #hero p {
-                font-size: 0.9rem; /* Adjusted for smaller screens */
-            }
+            /* Hero section font sizes are handled by the 480px breakpoint above this */
             .feature-card, .program-card, .teacher-profile-row, .news-card, .achievement-card, .result-card, .time-table-card {
                 margin-bottom: 20px;
             }
@@ -1847,7 +1857,7 @@
                                 </div>
                                 <div class="dev-info">
                                     <h6>Ayesha Malik (WhatsApp)</h6>
-                                    <p>+92 3184195665</p>
+                                    <p>+92 3164195665</p>
                                 </div>
                             </div>
 
