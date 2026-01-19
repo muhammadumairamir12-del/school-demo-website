@@ -857,16 +857,14 @@
             .developer-section .developer-card {
                 padding: 30px;
             }
+            /* Floating buttons on tablets/small desktops */
             .floating-buttons {
-                flex-direction: column; /* Stack vertically on small screens */
-                right: 15px; /* Adjust right position */
+                flex-direction: row; /* Horizontal on larger mobile/tablet */
+                right: 50%;
+                transform: translateX(50%);
                 bottom: 15px;
-                gap: 10px; /* Space between buttons */
-            }
-            .floating-btn {
-                width: 50px; /* Slightly smaller for mobile */
-                height: 50px;
-                font-size: 1.6rem;
+                gap: 10px;
+                width: auto; /* Allow content to dictate width */
             }
         }
         @media (max-width: 575.98px) {
@@ -874,10 +872,10 @@
                 padding: 40px 0;
             }
             #hero h1 {
-                font-size: 2rem;
+                font-size: 2rem; /* Adjusted for smaller screens */
             }
             #hero p {
-                font-size: 0.9rem;
+                font-size: 0.9rem; /* Adjusted for smaller screens */
             }
             .feature-card, .program-card, .teacher-profile-row, .news-card, .achievement-card, .result-card, .time-table-card {
                 margin-bottom: 20px;
@@ -903,10 +901,14 @@
             .dev-info p {
                 font-size: 0.9rem;
             }
+            /* Floating buttons on very small mobile screens */
             .floating-buttons {
+                flex-direction: column; /* Stack vertically again on smallest screens */
                 bottom: 10px;
                 right: 10px;
                 gap: 8px;
+                transform: translateX(0%); /* Reset transform for fixed right position */
+                width: auto;
             }
             .floating-btn {
                 width: 45px;
@@ -1157,21 +1159,21 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="facility-card">
-                            <img src="https://thumbs.dreamstime.com/z/interior-clean-modern-white-laboratory-background-laboratory-concept-medical-chemical-caucasian-male-chemist-horizontal-63500347.jpg?ct=jpeg" alt="Modern Science Lab">
+                            <img src="https://thumbs.dreamstime.com/z/interior-clean-modern-white-laboratory-background-laboratory-concept-medical-chemical-caucasian-male-chemist-horizontal-63500347.jpg?ct=jpeg" alt="Modern Science Lab" class="img-fluid">
                             <h4>Modern Science Lab</h4>
                             <p>Equipped with advanced apparatus for Chemistry, Physics, and Biology, our labs provide hands-on experimental learning, sparking scientific curiosity and innovation among students.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                         <div class="facility-card">
-                            <img src="https://media.istockphoto.com/id/669775660/photo/students-in-a-computers-class-at-the-school.jpg?s=1024x1024&w=is&k=20&c=D7QbK6iTMDkCrJ4-prmodwDJw5vMUqaTewhSsp2xTLo=" alt="Advanced Computer Lab">
+                            <img src="https://media.istockphoto.com/id/669775660/photo/students-in-a-computers-class-at-the-school.jpg?s=1024x1024&w=is&k=20&c=D7QbK6iTMDkCrJ4-prmodwDJw5vMUqaTewhSsp2xTLo=" alt="Advanced Computer Lab" class="img-fluid">
                             <h4>Advanced Computer Lab</h4>
                             <p>Our state-of-the-art computer lab features the latest hardware and software, offering students practical experience in coding, digital design, and information technology skills essential for the future.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
                         <div class="facility-card">
-                            <img src="https://images.unsplash.com/photo-1662582632312-e9d55a5f70b8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Extensive Library">
+                            <img src="https://images.unsplash.com/photo-1662582632312-e9d55a5f70b8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Extensive Library" class="img-fluid">
                             <h4>Extensive Library & Resource Center</h4>
                             <p>A serene space brimming with a diverse collection of books, journals, and digital resources. Our library encourages research, independent study, and cultivates a lifelong love for reading.</p>
                         </div>
@@ -1368,7 +1370,7 @@
                 <p data-aos="fade-up" data-aos-delay="100">
                     Secure your child's future with quality education. Apply online now for all classes.
                 </p>
-                <a href="#contact" class="btn btn-primary-custom btn-lg" data-aos="fade-up" data-aos-delay="200">Fill Online Admission Form</a>
+                <a href="#contact" class="btn btn-primary-custom btn-lg">Fill Online Admission Form</a>
             </div>
         </section>
 
@@ -1384,7 +1386,7 @@
                     <div class="col-12" data-aos="fade-up" data-aos-delay="100">
                         <div class="teacher-profile-row">
                             <div class="teacher-img-container">
-                                <img src="https://images.pexels.com/photos/8197541/pexels-photo-8197541.jpeg" alt="Mr. Ahmed Khan - Principal" class="teacher-img" loading="lazy">
+                                <img src="https://images.pexels.com/photos/8197541/pexels-photo-8197541.jpeg" alt="Mr. Ahmed Khan - Principal" class="img-fluid" loading="lazy">
                             </div>
                             <div class="teacher-info">
                                 <h3 class="teacher-name">Mr. Ahmed Khan</h3>
@@ -1404,7 +1406,7 @@
                     <div class="col-12" data-aos="fade-up" data-aos-delay="200">
                         <div class="teacher-profile-row">
                             <div class="teacher-img-container">
-                                <img src="https://images.pexels.com/photos/6981004/pexels-photo-6981004.jpeg" alt="Ms. Fatima Ali - Head of Science" class="teacher-img" loading="lazy">
+                                <img src="https://images.pexels.com/photos/6981004/pexels-photo-6981004.jpeg" alt="Ms. Fatima Ali - Head of Science" class="img-fluid" loading="lazy">
                             </div>
                             <div class="teacher-info">
                                 <h3 class="teacher-name">Ms. Fatima Ali</h3>
@@ -1424,7 +1426,7 @@
                     <div class="col-12" data-aos="fade-up" data-aos-delay="300">
                         <div class="teacher-profile-row">
                             <div class="teacher-img-container">
-                                <img src="https://images.pexels.com/photos/6503155/pexels-photo-6503155.jpeg" alt="Ms. Sana Tariq - Early Years Coordinator" class="teacher-img" loading="lazy">
+                                <img src="https://images.pexels.com/photos/6503155/pexels-photo-6503155.jpeg" alt="Ms. Sana Tariq - Early Years Coordinator" class="img-fluid" loading="lazy">
                             </div>
                             <div class="teacher-info">
                                 <h3 class="teacher-name">Ms. Sana Tariq</h3>
@@ -1444,7 +1446,7 @@
                     <div class="col-12" data-aos="fade-up" data-aos-delay="400">
                         <div class="teacher-profile-row">
                             <div class="teacher-img-container">
-                                <img src="https://images.pexels.com/photos/8617768/pexels-photo-8617768.jpeg" alt="Mr. Haris Qureshi - Mathematics" class="teacher-img" loading="lazy">
+                                <img src="https://images.pexels.com/photos/8617768/pexels-photo-8617768.jpeg" alt="Mr. Haris Qureshi - Mathematics" class="img-fluid" loading="lazy">
                             </div>
                             <div class="teacher-info">
                                 <h3 class="teacher-name">Mr. Haris Qureshi</h3>
@@ -1464,7 +1466,7 @@
                     <div class="col-12" data-aos="fade-up" data-aos-delay="500">
                         <div class="teacher-profile-row">
                             <div class="teacher-img-container">
-                                <img src="https://images.pexels.com/photos/6913213/pexels-photo-6913213.jpeg" alt="Dr. Ayesha Imtiaz - English" class="teacher-img" loading="lazy">
+                                <img src="https://images.pexels.com/photos/6913213/pexels-photo-6913213.jpeg" alt="Dr. Ayesha Imtiaz - English" class="img-fluid" loading="lazy">
                             </div>
                             <div class="teacher-info">
                                 <h3 class="teacher-name">Dr. Ayesha Imtiaz</h3>
@@ -1547,7 +1549,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
                         <div class="gallery-item">
-                            <img src="https://images.pexels.com/photos/18012457/pexels-photo-18012457.jpeg" alt="Classroom Activity">
+                            <img src="https://images.pexels.com/photos/18012457/pexels-photo-18012457.jpeg" alt="Classroom Activity" class="img-fluid">
                             <div class="gallery-overlay">
                                 <i class="fas fa-search-plus"></i>
                             </div>
@@ -1555,7 +1557,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
                         <div class="gallery-item">
-                            <img src="https://images.pexels.com/photos/8617575/pexels-photo-8617575.jpeg" alt="Science Lab">
+                            <img src="https://images.pexels.com/photos/8617575/pexels-photo-8617575.jpeg" alt="Science Lab" class="img-fluid">
                             <div class="gallery-overlay">
                                 <i class="fas fa-search-plus"></i>
                             </div>
@@ -1563,7 +1565,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
                         <div class="gallery-item">
-                            <img src="https://images.pexels.com/photos/8422207/pexels-photo-8422207.jpeg" alt="Library Reading">
+                            <img src="https://images.pexels.com/photos/8422207/pexels-photo-8422207.jpeg" alt="Library Reading" class="img-fluid">
                             <div class="gallery-overlay">
                                 <i class="fas fa-search-plus"></i>
                             </div>
@@ -1571,7 +1573,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
                         <div class="gallery-item">
-                            <img src="https://images.pexels.com/photos/8535146/pexels-photo-8535146.jpeg" alt="Children Playing in Playground">
+                            <img src="https://images.pexels.com/photos/8535146/pexels-photo-8535146.jpeg" alt="Children Playing in Playground" class="img-fluid">
                             <div class="gallery-overlay">
                                 <i class="fas fa-search-plus"></i>
                             </div>
@@ -1579,7 +1581,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
                         <div class="gallery-item">
-                            <img src="https://images.pexels.com/photos/8421922/pexels-photo-8421922.jpeg" alt="Art Class">
+                            <img src="https://images.pexels.com/photos/8421922/pexels-photo-8421922.jpeg" alt="Art Class" class="img-fluid">
                             <div class="gallery-overlay">
                                 <i class="fas fa-search-plus"></i>
                             </div>
@@ -1587,7 +1589,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
                         <div class="gallery-item">
-                            <img src="https://images.pexels.com/photos/8617623/pexels-photo-8617623.jpeg" alt="Group Study">
+                            <img src="https://images.pexels.com/photos/8617623/pexels-photo-8617623.jpeg" alt="Group Study" class="img-fluid">
                             <div class="gallery-overlay">
                                 <i class="fas fa-search-plus"></i>
                             </div>
@@ -1595,7 +1597,7 @@
                     </div>
                      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="700">
                         <div class="gallery-item">
-                            <img src="https://images.pexels.com/photos/1164572/pexels-photo-1164572.jpeg" alt="School Architecture Exterior">
+                            <img src="https://images.pexels.com/photos/1164572/pexels-photo-1164572.jpeg" alt="School Architecture Exterior" class="img-fluid">
                             <div class="gallery-overlay">
                                 <i class="fas fa-search-plus"></i>
                             </div>
@@ -1603,7 +1605,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="800">
                         <div class="gallery-item">
-                            <img src="https://images.pexels.com/photos/32229325/pexels-photo-32229325.jpeg" alt="Modern School Building">
+                            <img src="https://images.pexels.com/photos/32229325/pexels-photo-32229325.jpeg" alt="Modern School Building" class="img-fluid">
                             <div class="gallery-overlay">
                                 <i class="fas fa-search-plus"></i>
                             </div>
@@ -1611,7 +1613,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="900">
                         <div class="gallery-item">
-                            <img src="https://images.pexels.com/photos/15065571/pexels-photo-15065571.jpeg" alt="School Assembly">
+                            <img src="https://images.pexels.com/photos/15065571/pexels-photo-15065571.jpeg" alt="School Assembly" class="img-fluid">
                             <div class="gallery-overlay">
                                 <i class="fas fa-search-plus"></i>
                             </div>
@@ -1620,7 +1622,7 @@
                     <!-- New Gallery Items for Annual Event Photos -->
                     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="1000">
                         <div class="gallery-item">
-                            <img src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Annual Day Performance">
+                            <img src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Annual Day Performance" class="img-fluid">
                             <div class="gallery-overlay">
                                 <i class="fas fa-search-plus"></i>
                             </div>
@@ -1628,7 +1630,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="1100">
                         <div class="gallery-item">
-                            <img src="https://images.pexels.com/photos/139308/pexels-photo-139308.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sports Day Activities">
+                            <img src="https://images.pexels.com/photos/139308/pexels-photo-139308.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sports Day Activities" class="img-fluid">
                             <div class="gallery-overlay">
                                 <i class="fas fa-search-plus"></i>
                             </div>
@@ -1636,7 +1638,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="1200">
                         <div class="gallery-item">
-                            <img src="https://studentreasures.com/wp-content/uploads/2025/03/student-award-ideas-stand-out-boy-with-award.jpg" alt="School Awards Ceremony">
+                            <img src="https://studentreasures.com/wp-content/uploads/2025/03/student-award-ideas-stand-out-boy-with-award.jpg" alt="School Awards Ceremony" class="img-fluid">
                             <div class="gallery-overlay">
                                 <i class="fas fa-search-plus"></i>
                             </div>
@@ -1819,7 +1821,7 @@
                     <div class="col-lg-6" data-aos="fade-right">
                         <div class="subtitle" style="color: var(--accent); letter-spacing: 3px; font-weight: 600; text-transform: uppercase; margin-bottom: 15px;">Digital Architect</div>
                         <h2 class="display-5 fw-bold mb-4">
-                            Developed by <br><span style="color: var(--primary);">Muhammad Umair</span>
+                            Developed by <br><span style="color: var(--primary);">Muhammad Umair & Team</span>
                         </h2>
                         <p class="mb-4" style="line-height: 1.8; font-size: 1.1rem; color: #CCCCCC;">
                             This premium digital experience was conceptualized and crafted with excellence by Muhammad Umair. Specializing in professional web solutions, ensuring every pixel reflects care and trust.
@@ -1897,9 +1899,9 @@
                     <h5>Contact Info</h5>
                     <ul>
                         <li><i class="fas fa-map-marker-alt me-2"></i> Street 4, Block C, Gulgasht Colony, Multan</li>
-                        <li><i class="fas fa-phone-alt me-2"></i> +92 318 4195665</li>
-                        <li><i class="fab fa-whatsapp me-2"></i> +92 318 4195665</li>
-                        <li><i class="fas fa-envelope me-2"></i> info@educator.com</li>
+                        <li><i class="fas fa-phone-alt me-2"></i> <a href="tel:+923184195665">+92 318 4195665</a></li>
+                        <li><i class="fab fa-whatsapp me-2"></i> <a href="https://wa.me/923184195665" target="_blank">+92 318 4195665</a></li>
+                        <li><i class="fas fa-envelope me-2"></i> <a href="mailto:info@educator.com">info@educator.com</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
