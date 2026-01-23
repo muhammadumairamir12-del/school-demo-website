@@ -982,98 +982,219 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero">
+        <section id="hero-modern">
             <style>
+                /* Base styles for the modern hero section */
+                #hero-modern {
+                    width: 100%;
+                    height: 100vh; /* Full viewport height */
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                #hero-modern .carousel-item {
+                    width: 100%;
+                    height: 100vh;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    display: flex;
+                    align-items: center; /* Vertically center content */
+                    justify-content: center; /* Horizontally center content */
+                }
+
+                #hero-modern .hero-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text readability */
+                    z-index: 1;
+                }
+
+                #hero-modern .hero-container {
+                    position: relative;
+                    z-index: 2; /* Ensure content is above overlay */
+                    color: #fff;
+                    text-align: center; /* Default center alignment for large screens */
+                    padding: 0 20px; /* Add some padding on sides */
+                }
+
+                #hero-modern .hero-content h1 {
+                    font-size: 3.5rem;
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                    color: #FFD700; /* Colorful text for headings - Gold */
+                    line-height: 1.2;
+                }
+
+                #hero-modern .hero-content p {
+                    font-size: 1.5rem;
+                    margin-bottom: 30px;
+                    color: #ADD8E6; /* Colorful text for paragraphs - Light Blue */
+                    opacity: 0.9;
+                }
+
+                #hero-modern .hero-actions .btn {
+                    border-radius: 50px;
+                    padding: 12px 35px;
+                    font-size: 1.1rem;
+                    text-transform: uppercase;
+                    transition: 0.3s;
+                    margin: 0 10px;
+                }
+
+                #hero-modern .hero-actions .btn-primary-custom {
+                    background-color: #6a11cb; /* Example custom primary color */
+                    border-color: #6a11cb;
+                    color: #fff;
+                }
+
+                #hero-modern .hero-actions .btn-primary-custom:hover {
+                    background-color: #2575fc; /* Example hover color */
+                    border-color: #2575fc;
+                }
+
+                #hero-modern .hero-actions .btn-outline-light {
+                    border: 2px solid #fff;
+                    color: #fff;
+                }
+
+                #hero-modern .hero-actions .btn-outline-light:hover {
+                    background-color: #fff;
+                    color: #6a11cb;
+                }
+
                 /* Custom styles for mobile responsiveness */
                 @media (max-width: 768px) {
-                    .carousel-caption {
-                        /* Adjust positioning for better visibility on small screens */
+                    #hero-modern .hero-container {
+                        text-align: left !important; /* Align text to the left on mobile */
                         left: 15px !important; /* Move more to the left with a small margin */
                         right: 15px !important; /* Ensure content doesn't go too far right either */
-                        text-align: left !important; /* Align text to the left */
-                        /* Optional: Adjust vertical positioning if content is too close to top/bottom */
-                        /* top: 50% !important; */
-                        /* transform: translateY(-50%) !important; */
+                        transform: none !important; /* Remove any center transformations */
+                        top: auto !important; /* Remove any vertical centering */
+                        bottom: 10% !important; /* Position content from bottom on mobile */
                     }
-                    /* Ensure heading and paragraph text also align left */
-                    .carousel-caption h1,
-                    .carousel-caption p {
+                    
+                    #hero-modern .hero-content h1 {
+                        font-size: 2rem; /* Smaller heading on mobile */
                         text-align: left !important;
                     }
+
+                    #hero-modern .hero-content p {
+                        font-size: 1rem; /* Smaller paragraph on mobile */
+                        text-align: left !important;
+                    }
+
                     /* Align buttons to the left and stack them vertically for mobile */
-                    .carousel-caption .d-flex {
+                    #hero-modern .hero-actions {
                         justify-content: flex-start !important; /* Ensure buttons start from the left */
                         flex-direction: column !important; /* Stack buttons vertically */
                         align-items: flex-start !important; /* Align stacked buttons to the start */
                         gap: 10px !important; /* Add space between stacked buttons */
+                        display: flex; /* Ensure flexbox is applied */
                     }
-                    /* Remove gap-3 for mobile as flex-direction column handles spacing */
-                    .carousel-caption .d-flex.gap-3 {
-                        gap: 0 !important;
+                    
+                    #hero-modern .hero-actions .btn {
+                        margin: 0; /* Remove horizontal margin */
+                        margin-top: 10px; /* Space between each button when stacked */
+                        width: 100%; /* Make buttons full width on mobile */
+                        max-width: 250px; /* Optional: limit max width of stacked buttons */
+                        padding: 10px 20px; /* Adjust padding for mobile buttons */
                     }
-                    /* Add some vertical margin between buttons when stacked */
-                    .carousel-caption .d-flex .btn {
-                        margin-top: 10px; /* Space between each button */
-                        width: auto; /* Allow buttons to take their natural width or define a specific width */
-                    }
-                    .carousel-caption .d-flex .btn:first-child {
+                    #hero-modern .hero-actions .btn:first-child {
                         margin-top: 0; /* No top margin for the first button in the stack */
+                    }
+
+                    /* Carousel controls adjustments for mobile */
+                    #hero-modern .carousel-control-prev,
+                    #hero-modern .carousel-control-next {
+                        width: 10%; /* Make controls smaller */
                     }
                 }
             </style>
             <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
                 <div class="carousel-inner">
-                    <div class="carousel-item active" style="background-image: url('https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
-                        <div class="carousel-caption">
-                            <h1 data-aos="fade-up" data-aos-delay="100">Quality Education for Your Child’s Bright Future at Educator</h1>
-                            <p class="lead" data-aos="fade-up" data-aos-delay="200">Modern classrooms, expert teachers, and holistic development for every student.</p>
-                            <div class="d-flex justify-content-start gap-3" data-aos="fade-up" data-aos-delay="300">
-                                <a href="#admissions" class="btn btn-primary-custom btn-lg">Admission Inquiry</a>
-                                <a href="#contact" class="btn btn-secondary-custom btn-lg">Contact Us</a>
+
+                    <!-- Carousel Item 1 -->
+                    <div class="carousel-item active hero-slide" style="background-image: url('https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-container">
+                            <div class="hero-content">
+                                <h1 data-aos="fade-up" data-aos-delay="100">Quality Education for Your Child’s Bright Future at Educator</h1>
+                                <p data-aos="fade-up" data-aos-delay="200">Modern classrooms, expert teachers, and holistic development for every student.</p>
+                                <div class="hero-actions d-flex justify-content-start gap-3" data-aos="fade-up" data-aos-delay="300">
+                                    <a href="#admissions" class="btn btn-primary-custom btn-lg">Admission Inquiry</a>
+                                    <a href="#contact" class="btn btn-outline-light btn-lg">Contact Us</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item" style="background-image: url('https://images.pexels.com/photos/10646430/pexels-photo-10646430.jpeg');">
-                        <div class="carousel-caption">
-                            <h1 data-aos="fade-up" data-aos-delay="100">Empowering Minds, Building Futures at Educator</h1>
-                            <p class="lead" data-aos="fade-up" data-aos-delay="200">A vibrant learning environment where curiosity thrives and potential is unleashed.</p>
-                            <div class="d-flex justify-content-start gap-3" data-aos="fade-up" data-aos-delay="300">
-                                <a href="#academics" class="btn btn-primary-custom btn-lg">Explore Programs</a>
-                                <a href="#gallery" class="btn btn-secondary-custom btn-lg">View Campus</a>
+
+                    <!-- Carousel Item 2 -->
+                    <div class="carousel-item hero-slide" style="background-image: url('https://images.pexels.com/photos/10646430/pexels-photo-10646430.jpeg');">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-container">
+                            <div class="hero-content">
+                                <h1 data-aos="fade-up" data-aos-delay="100">Empowering Minds, Building Futures at Educator</h1>
+                                <p data-aos="fade-up" data-aos-delay="200">A vibrant learning environment where curiosity thrives and potential is unleashed.</p>
+                                <div class="hero-actions d-flex justify-content-start gap-3" data-aos="fade-up" data-aos-delay="300">
+                                    <a href="#academics" class="btn btn-primary-custom btn-lg">Explore Programs</a>
+                                    <a href="#gallery" class="btn btn-outline-light btn-lg">View Campus</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item" style="background-image: url('https://images.pexels.com/photos/35107553/pexels-photo-35107553.jpeg');">
-                        <div class="carousel-caption">
-                            <h1 data-aos="fade-up" data-aos-delay="100">Nurturing Excellence, Inspiring Innovation at Educator</h1>
-                            <p class="lead" data-aos="fade-up" data-aos-delay="200">Preparing students for success in a rapidly changing world through innovative teaching.</p>
-                            <div class="d-flex justify-content-start gap-3" data-aos="fade-up" data-aos-delay="300">
-                                <a href="#admissions" class="btn btn-primary-custom btn-lg">Apply Now</a>
-                                <a href="#about" class="btn btn-secondary-custom btn-lg">Learn More</a>
+
+                    <!-- Carousel Item 3 -->
+                    <div class="carousel-item hero-slide" style="background-image: url('https://images.pexels.com/photos/35107553/pexels-photo-35107553.jpeg');">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-container">
+                            <div class="hero-content">
+                                <h1 data-aos="fade-up" data-aos-delay="100">Nurturing Excellence, Inspiring Innovation at Educator</h1>
+                                <p data-aos="fade-up" data-aos-delay="200">Preparing students for success in a rapidly changing world through innovative teaching.</p>
+                                <div class="hero-actions d-flex justify-content-start gap-3" data-aos="fade-up" data-aos-delay="300">
+                                    <a href="#admissions" class="btn btn-primary-custom btn-lg">Apply Now</a>
+                                    <a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                     <div class="carousel-item" style="background-image: url('https://images.pexels.com/photos/8535165/pexels-photo-8535165.jpeg');">
-                        <div class="carousel-caption">
-                            <h1 data-aos="fade-up" data-aos-delay="100">Our Beautiful Campus Architecture</h1>
-                            <p class="lead" data-aos="fade-up" data-aos-delay="200">A conducive environment designed for optimal learning and growth.</p>
-                            <div class="d-flex justify-content-start gap-3" data-aos="fade-up" data-aos-delay="300">
-                                <a href="#gallery" class="btn btn-primary-custom btn-lg">Explore Gallery</a>
-                                <a href="#contact" class="btn btn-secondary-custom btn-lg">Visit Us</a>
+
+                    <!-- Carousel Item 4 -->
+                     <div class="carousel-item hero-slide" style="background-image: url('https://images.pexels.com/photos/8535165/pexels-photo-8535165.jpeg');">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-container">
+                            <div class="hero-content">
+                                <h1 data-aos="fade-up" data-aos-delay="100">Our Beautiful Campus Architecture</h1>
+                                <p data-aos="fade-up" data-aos-delay="200">A conducive environment designed for optimal learning and growth.</p>
+                                <div class="hero-actions d-flex justify-content-start gap-3" data-aos="fade-up" data-aos-delay="300">
+                                    <a href="#gallery" class="btn btn-primary-custom btn-lg">Explore Gallery</a>
+                                    <a href="#contact" class="btn btn-outline-light btn-lg">Visit Us</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item" style="background-image: url('https://images.pexels.com/photos/35128469/pexels-photo-35128469.jpeg');">
-                        <div class="carousel-caption">
-                            <h1 data-aos="fade-up" data-aos-delay="100">Fun and Learning in Our Playground</h1>
-                            <p class="lead" data-aos="fade-up" data-aos-delay="200">Where children learn to play, share, and develop essential social skills.</p>
-                            <div class="d-flex justify-content-start gap-3" data-aos="fade-up" data-aos-delay="300">
-                                <a href="#gallery" class="btn btn-primary-custom btn-lg">See Playground Photos</a>
-                                <a href="#admissions" class="btn btn-secondary-custom btn-lg">Join Us</a>
+
+                    <!-- Carousel Item 5 -->
+                    <div class="carousel-item hero-slide" style="background-image: url('https://images.pexels.com/photos/35128469/pexels-photo-35128469.jpeg');">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-container">
+                            <div class="hero-content">
+                                <h1 data-aos="fade-up" data-aos-delay="100">Fun and Learning in Our Playground</h1>
+                                <p data-aos="fade-up" data-aos-delay="200">Where children learn to play, share, and develop essential social skills.</p>
+                                <div class="hero-actions d-flex justify-content-start gap-3" data-aos="fade-up" data-aos-delay="300">
+                                    <a href="#gallery" class="btn btn-primary-custom btn-lg">See Playground Photos</a>
+                                    <a href="#admissions" class="btn btn-outline-light btn-lg">Join Us</a>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
+
                 <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
@@ -2214,4 +2335,5 @@
 </body>
 
 </html>
+
 
