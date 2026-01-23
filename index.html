@@ -988,8 +988,8 @@
                 @media (max-width: 768px) {
                     .carousel-caption {
                         /* Adjust positioning for better visibility on small screens */
-                        left: 20px !important; /* Left padding for text */
-                        right: 20px !important; /* Right padding for text */
+                        left: 15px !important; /* Move more to the left with a small margin */
+                        right: 15px !important; /* Ensure content doesn't go too far right either */
                         text-align: left !important; /* Align text to the left */
                         /* Optional: Adjust vertical positioning if content is too close to top/bottom */
                         /* top: 50% !important; */
@@ -1000,9 +1000,24 @@
                     .carousel-caption p {
                         text-align: left !important;
                     }
-                    /* Align buttons to the left for mobile */
+                    /* Align buttons to the left and stack them vertically for mobile */
                     .carousel-caption .d-flex {
-                        justify-content: flex-start !important;
+                        justify-content: flex-start !important; /* Ensure buttons start from the left */
+                        flex-direction: column !important; /* Stack buttons vertically */
+                        align-items: flex-start !important; /* Align stacked buttons to the start */
+                        gap: 10px !important; /* Add space between stacked buttons */
+                    }
+                    /* Remove gap-3 for mobile as flex-direction column handles spacing */
+                    .carousel-caption .d-flex.gap-3 {
+                        gap: 0 !important;
+                    }
+                    /* Add some vertical margin between buttons when stacked */
+                    .carousel-caption .d-flex .btn {
+                        margin-top: 10px; /* Space between each button */
+                        width: auto; /* Allow buttons to take their natural width or define a specific width */
+                    }
+                    .carousel-caption .d-flex .btn:first-child {
+                        margin-top: 0; /* No top margin for the first button in the stack */
                     }
                 }
             </style>
@@ -2199,3 +2214,4 @@
 </body>
 
 </html>
+
