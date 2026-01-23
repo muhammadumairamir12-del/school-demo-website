@@ -983,13 +983,36 @@
     <main>
         <!-- Hero Section -->
         <section id="hero">
+            <style>
+                /* Custom styles for mobile responsiveness */
+                @media (max-width: 768px) {
+                    .carousel-caption {
+                        /* Adjust positioning for better visibility on small screens */
+                        left: 20px !important; /* Left padding for text */
+                        right: 20px !important; /* Right padding for text */
+                        text-align: left !important; /* Align text to the left */
+                        /* Optional: Adjust vertical positioning if content is too close to top/bottom */
+                        /* top: 50% !important; */
+                        /* transform: translateY(-50%) !important; */
+                    }
+                    /* Ensure heading and paragraph text also align left */
+                    .carousel-caption h1,
+                    .carousel-caption p {
+                        text-align: left !important;
+                    }
+                    /* Align buttons to the left for mobile */
+                    .carousel-caption .d-flex {
+                        justify-content: flex-start !important;
+                    }
+                }
+            </style>
             <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
                 <div class="carousel-inner">
                     <div class="carousel-item active" style="background-image: url('https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
                         <div class="carousel-caption">
                             <h1 data-aos="fade-up" data-aos-delay="100">Quality Education for Your Child’s Bright Future at Educator</h1>
                             <p class="lead" data-aos="fade-up" data-aos-delay="200">Modern classrooms, expert teachers, and holistic development for every student.</p>
-                            <div class="d-flex justify-content-center gap-3" data-aos="fade-up" data-aos-delay="300">
+                            <div class="d-flex justify-content-start gap-3" data-aos="fade-up" data-aos-delay="300">
                                 <a href="#admissions" class="btn btn-primary-custom btn-lg">Admission Inquiry</a>
                                 <a href="#contact" class="btn btn-secondary-custom btn-lg">Contact Us</a>
                             </div>
@@ -999,7 +1022,7 @@
                         <div class="carousel-caption">
                             <h1 data-aos="fade-up" data-aos-delay="100">Empowering Minds, Building Futures at Educator</h1>
                             <p class="lead" data-aos="fade-up" data-aos-delay="200">A vibrant learning environment where curiosity thrives and potential is unleashed.</p>
-                            <div class="d-flex justify-content-center gap-3" data-aos="fade-up" data-aos-delay="300">
+                            <div class="d-flex justify-content-start gap-3" data-aos="fade-up" data-aos-delay="300">
                                 <a href="#academics" class="btn btn-primary-custom btn-lg">Explore Programs</a>
                                 <a href="#gallery" class="btn btn-secondary-custom btn-lg">View Campus</a>
                             </div>
@@ -1009,7 +1032,7 @@
                         <div class="carousel-caption">
                             <h1 data-aos="fade-up" data-aos-delay="100">Nurturing Excellence, Inspiring Innovation at Educator</h1>
                             <p class="lead" data-aos="fade-up" data-aos-delay="200">Preparing students for success in a rapidly changing world through innovative teaching.</p>
-                            <div class="d-flex justify-content-center gap-3" data-aos="fade-up" data-aos-delay="300">
+                            <div class="d-flex justify-content-start gap-3" data-aos="fade-up" data-aos-delay="300">
                                 <a href="#admissions" class="btn btn-primary-custom btn-lg">Apply Now</a>
                                 <a href="#about" class="btn btn-secondary-custom btn-lg">Learn More</a>
                             </div>
@@ -1019,7 +1042,7 @@
                         <div class="carousel-caption">
                             <h1 data-aos="fade-up" data-aos-delay="100">Our Beautiful Campus Architecture</h1>
                             <p class="lead" data-aos="fade-up" data-aos-delay="200">A conducive environment designed for optimal learning and growth.</p>
-                            <div class="d-flex justify-content-center gap-3" data-aos="fade-up" data-aos-delay="300">
+                            <div class="d-flex justify-content-start gap-3" data-aos="fade-up" data-aos-delay="300">
                                 <a href="#gallery" class="btn btn-primary-custom btn-lg">Explore Gallery</a>
                                 <a href="#contact" class="btn btn-secondary-custom btn-lg">Visit Us</a>
                             </div>
@@ -1029,7 +1052,7 @@
                         <div class="carousel-caption">
                             <h1 data-aos="fade-up" data-aos-delay="100">Fun and Learning in Our Playground</h1>
                             <p class="lead" data-aos="fade-up" data-aos-delay="200">Where children learn to play, share, and develop essential social skills.</p>
-                            <div class="d-flex justify-content-center gap-3" data-aos="fade-up" data-aos-delay="300">
+                            <div class="d-flex justify-content-start gap-3" data-aos="fade-up" data-aos-delay="300">
                                 <a href="#gallery" class="btn btn-primary-custom btn-lg">See Playground Photos</a>
                                 <a href="#admissions" class="btn btn-secondary-custom btn-lg">Join Us</a>
                             </div>
@@ -1046,7 +1069,6 @@
                 </button>
             </div>
         </section>
-
         <!-- About Us Section -->
         <section id="about" class="section-padding bg-light-gray">
             <div class="container">
@@ -2175,4 +2197,5 @@
         });
     </script>
 </body>
+
 </html>
